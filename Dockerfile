@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Grzegorz Wodo <grzegorz.wodo@gmail.com>
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install unzip curl
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install wget unzip curl
 
 ADD run.sh /run.sh
 RUN chmod +x /run.sh

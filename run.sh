@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [ -z "$PS_VERSION" ]; then
-  echo "Prestashop version not found. Please set up OC_VERSION variable properly."
+if [ -z "$OC_VERSION" ]; then
+  echo "Opencart version not found. Please set up OC_VERSION variable properly."
   exit 1
 fi
 
-curl -s -o /tmp/temp "https://github.com/opencart/opencart/archive/$OC_VERSION.zip"
-unzip -q /tmp/temp -d /tmp
-cp -rf /tmp/prestashop/* /var/www/html
+wget   "https://github.com/opencart/opencart/archive/$OC_VERSION.zip" -P /tmp/
+unzip -q /tmp/$OC_VERSION.zip -d /tmp
+cp -rf /tmp/opencart-$OC_VERSION/* /var/www/html
 rm -rf /tmp/*
 chown -R www-data:www-data /var/www
 
