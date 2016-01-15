@@ -11,9 +11,9 @@ cp -rf /tmp/opencart-$OC_VERSION/* /var/www/html
 rm -rf /tmp/*
 chown -R www-data:www-data /var/www
 
-if [ -n "$PLUGIN_NAME" ]; then
-  chmod -Rf 777 /var/www/html/modules/$PLUGIN_NAME
-fi
+#if [ -n "$PLUGIN_NAME" ]; then
+#  chmod -Rf 777 /var/www/html/modules/$PLUGIN_NAME
+#fi
 
 if [ -n "$1" ]; then
 	exec $1
