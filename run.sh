@@ -6,6 +6,7 @@ if [ -z "$OC_VERSION" ]; then
 fi
 
 wget   "https://github.com/opencart/opencart/archive/$OC_VERSION.zip" -P /tmp/
+echo "unziping...."
 unzip -q /tmp/$OC_VERSION.zip -d /tmp
 cp -rf /tmp/opencart-$OC_VERSION/* /var/www/html
 rm -rf /tmp/*
