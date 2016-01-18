@@ -7,6 +7,11 @@ ADD run.sh /run.sh
 RUN chmod +x /run.sh
 RUN mkdir -p /var/www/html
 
+RUN mkdir -p /var/www/html/plugin
+RUN mkdir -p /var/www/html/plugin/seqr
+RUN mkdir -p /var/www/html/plugin/seqr/admin
+RUN mkdir -p /var/www/html/plugin/seqr/catalog
+
 # apache config
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
