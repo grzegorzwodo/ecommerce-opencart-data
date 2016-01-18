@@ -24,6 +24,9 @@ chgrp www-data /var/www/html/upload/admin/config.php
 #  chmod -Rf 777 /var/www/html/modules/$PLUGIN_NAME
 #fi
 
+#copy plugin files
+cp /var/www/html/plugin/seqr/admin/controller/payment/seqr.php /var/www/html/upload/admin/controller/payment/seqr.php
+
 if [ -n "$1" ]; then
 	exec $1
 elseif
