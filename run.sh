@@ -26,8 +26,8 @@ chgrp www-data /var/www/html/upload/admin/config.php
 
 #copy plugin files
 cp /var/www/html/plugin/seqr/admin/controller/payment/seqr.php /var/www/html/upload/admin/controller/payment/seqr.php
-chown www-data /var/www/html/upload/admin/controller/payment/seqr.ph
-chgrp www-data /var/www/html/upload/admin/controller/payment/seqr.ph
+chown www-data /var/www/html/upload/admin/controller/payment/seqr.php
+chgrp www-data /var/www/html/upload/admin/controller/payment/seqr.php
 
 cp /var/www/html/plugin/seqr/admin/language/english/payment/seqr.php /var/www/html/upload/admin/language/english/payment/seqr.php
 chown www-data /var/www/html/upload/admin/language/english/payment/seqr.php
