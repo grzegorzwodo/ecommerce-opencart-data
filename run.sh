@@ -5,6 +5,11 @@ if [ -z "$OC_VERSION" ]; then
   exit 1
 fi
 
+wget https://github.com/SeamlessDistribution/seqr-webshop-plugin/archive/develop.zip /tmp/
+unzip /tmp/develop.zip -d /tmp
+mkdir /var/www/html/seqr/
+cp -rf /tmp/seqr-webshop-plugin-develop/src/main/* /var/www/html/seqr/
+
 wget   "https://github.com/opencart/opencart/archive/$OC_VERSION.zip" -P /tmp/
 echo "unziping...."
 unzip -q /tmp/$OC_VERSION.zip -d /tmp
