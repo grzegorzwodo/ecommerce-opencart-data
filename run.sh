@@ -4,7 +4,7 @@ if [ -z "$OC_VERSION" ]; then
   echo "Opencart version not found. Please set up OC_VERSION variable properly."
   exit 1
 fi
-if [ ! -f /var/www/html/upload/index.php ]; then
+if [ -f /var/www/html/upload/index.php ]; then
     echo "Opencart is already instaled";
     exit 0;
 fi
